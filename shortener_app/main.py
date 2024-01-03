@@ -36,8 +36,8 @@ def create_url(url: schemas.URLBase, db: Session = Depends(get_db)):
     # db_url = models.URL (
     #     target_url=url.target_url, key=key, secret_key=secret_key
     db_url = crud.create_db_url(db=db, url=url)
-    db_url.url = key
-    db_url.admin_url = secret_key
+    db_url.url = db.url.key
+    db_url.admin_url = db.url.secret_key
 
     return db_url
 

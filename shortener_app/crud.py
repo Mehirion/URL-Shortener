@@ -1,6 +1,6 @@
 #crud create read update delete
 
-from sqlalchemy.orm import session
+from sqlalchemy.orm import Session
 
 from . import urlkeygen, models, schemas
 
